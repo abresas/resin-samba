@@ -1,0 +1,7 @@
+{
+	"scripts": {
+		"preinstall": "chmod u+x deps.sh && ./deps.sh",
+		"prestart": "chmod u+x ./smb-start.sh && ./smb-start.sh",
+		"start": "/etc/init.d/samba start && cp /app/init.js /data/init.js && nodemon --watch /data /data/init.js"
+    }
+}
